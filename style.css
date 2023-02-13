@@ -1,0 +1,867 @@
+:root {
+  --primaryColor: #9356dc;
+  --secondaryColor: #ff79da;
+  --tertiaryColor: #99e2d0;
+  --lightGreyColor: #f6f6f6;
+  --darkGreyColor: #eaeaea;
+}
+html {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+* {
+  box-sizing: border-box;
+}
+/* -----ECRITURE---Début---*/
+@font-face {
+  font-family: "Roboto";
+  src: url("/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+}
+body {
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Shrikhand", cursive;
+}
+h1 {
+  margin: 0;
+  box-shadow: 10px 20px 3px black;
+}
+h1 img,
+header img {
+  display: block;
+  max-width: 50%;
+  margin: 15px auto 15px auto;
+  justify-content: center;
+}
+h2 {
+  font-size: 1rem;
+}
+.h-two /* prend certaines caracteristique du H2 sans le sémantique  */ {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.font-weight-300 {
+  font-weight: 300;
+}
+.font-weight-500 {
+  font-weight: 500;
+}
+p,
+a,
+li,
+ul {
+  font-family: "Roboto", sans-serif;
+}
+/* -----ECRITURE---fin---*/
+ul,
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+i {
+  width: 14px;
+}
+/*___________________________________________KEYFRAMES___________________________________*/
+.loadSpinner {
+  animation: fadeout 0.6s 2.4s forwards;
+  background-color: rgba(246, 246, 246, 0.95);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.loadSpinner__Trois-Quart {
+  width: 350px;
+  height: 350px;
+  border-radius: 350px;
+  border: 17px solid;
+  border-top-color: var(--primaryColor);
+  border-left-color: var(--secondaryColor);
+  border-right-color: var(--tertiaryColor);
+  border-bottom-color: white;
+  animation: spinner 0.8s linear 3;
+  -webkit-animation: spinner 0.8s linear 3;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes greenCheck {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@-webkit-keyframes greenCheck {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes abracadabra-M1 {
+  from {
+    opacity: 0;
+    margin-top: 30px;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes abracadabra-M1 {
+  from {
+    opacity: 0;
+    margin-top: 30px;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes abracadabra-M2 {
+  from {
+    opacity: 0;
+    margin-top: 30px;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes abracadabra-M2 {
+  from {
+    opacity: 0;
+    margin-top: 30px;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes abracadabra-M3 {
+  from {
+    opacity: 0;
+    margin-top: 30px;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes abracadabra-M3 {
+  from {
+    opacity: 0;
+    margin-top: 30px;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes coeurMulticolore {
+  from {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes coeurMulticolore {
+  from {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes troisPetitsPoints {
+  0% {
+    padding-right: 0;
+  }
+  100% {
+    padding-right: 100px;
+  }
+}
+@keyframes troisPetitsPoints {
+  0% {
+    max-width: 100%;
+  }
+  100% {
+    max-width: 55%;
+  }
+}
+.toque {
+  position: relative;
+  left: 50px;
+  top: 20px;
+}
+/* --------------SEMANTIQUE ---------------- */
+header,
+main,
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  background-color: var(--lightGreyColor);
+}
+footer {
+  background-color: #353535;
+  color: white;
+  padding-left: 10px;
+}
+/* -----------------------------------BOUTONS--Début----------------------------BOUTONS--Début--------------  */
+.commander__bouton {
+  border: 0;
+  border-radius: 30px;
+  padding: 15px 20px 15px 20px;
+  background-image: linear-gradient(
+    165deg,
+    var(--secondaryColor) 0%,
+    var(--primaryColor) 100%
+  );
+  color: white;
+  font-family: "Roboto";
+  margin-top: 10px;
+  box-shadow: 0px 2px 5px Grey;
+}
+.btn__Menu {
+  padding: 15px 50px 15px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto 30px auto;
+}
+.commander__bouton:hover, .fonctionnement__bouton:hover /* Boutons :HOVER */ {
+  opacity: 0.9;
+  box-shadow: 0px 3px 6px Grey;
+}
+/* -------Fonctionnement Bouton---début----*/
+.fonctionnement__bouton {
+  background-color: var(--lightGreyColor);
+  width: 85%;
+  height: 70px;
+  border: 0;
+  border-radius: 20px;
+  padding: 0;
+  margin: 0 auto 20px auto;
+  font-family: "Roboto";
+  display: flex;
+  box-shadow: 0px 5px 4px lightgray;
+}
+.fonctionnement__bouton:hover {
+  background-color: rgb(147, 86, 220, 0.2);
+  color: var(--primaryColor);
+}
+.fonctionnement__bouton :nth-child(3):hover {
+  color: black !important;
+}
+.fonctionnement__bouton--nombre {
+  width: 12.5%;
+  display: flex;
+  align-items: center;
+}
+.fonctionnement__bouton__cercleViolet {
+  border-radius: 30px;
+  background-color: var(--primaryColor);
+  color: white;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  position: relative;
+  left: -12px;
+}
+.fonctionnement__bouton--icon {
+  width: 12.5%;
+  display: flex;
+}
+.fonctionnement__bouton i {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-self: center;
+}
+.fonctionnement__bouton--p {
+  min-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: black;
+}
+/* -------Fonctionnement Bouton---fin----*/
+/* -------CARD--------- début------------*/
+a > .card {
+  width: 90%;
+  margin: 10px auto 10px auto;
+  border-radius: 20px;
+}
+.headCard {
+  width: 100%;
+  height: 170px;
+  background-color: aqua;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.headCard > img {
+  height: 170px;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  object-fit: cover;
+  object-position: center; /* a refaire une par une  */
+  overflow: hidden;
+}
+.bodyCard {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 5px 4px lightgray;
+}
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 20px;
+  border-bottom-left-radius: 20px;
+}
+.infoCardTitre {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin: 12px 0 4px 0;
+}
+.infoCardLieu {
+  margin: 4px 0 12px 0;
+}
+.bodyCard__i {
+  margin-right: 25px;
+  align-self: center;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  display: inline-block;
+}
+.bodyCard__i .coeur {
+  display: none;
+  position: relative;
+  bottom: 18px;
+  z-index: 99;
+  width: 300px;
+  height: 300px;
+  color: transparent;
+  background-image: linear-gradient(#9356dc 0%, #ff79da 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.bodyCard__i:hover .coeur {
+  display: inline;
+  animation-duration: 0.7s;
+  animation-name: abracadabra-M1;
+}
+/* ---------- HEADER ---------- */
+header div {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  background-color: var(--darkGreyColor);
+  box-shadow: inset 0px 2px 3px lightGrey;
+}
+header i {
+  margin: auto 10px auto 0;
+}
+/*---------  MAIN--------- */
+.mainHead {
+  padding: 5px 13% 50px 13%;
+  justify-content: center;
+  text-align: center;
+}
+.fonctionnement {
+  background-color: white;
+  padding: 20px 0 20px 0;
+}
+/*_____________________________________________RESTAURANT (page index)__________________________________*/
+.restaurant {
+  background-color: var(--lightGreyColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 0 50px 0;
+}
+.restaurant a {
+  width: 100%;
+}
+.restaurant .commeUnTitre {
+  margin-right: auto;
+}
+.commeUnTitre {
+  margin: 25px 0 25px 20px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+/* ____________________--------- FOOTER  --------- ______________________ */
+footer h2 {
+  margin: 20px 0 10px 20px;
+}
+footer p,
+footer a {
+  margin: 12px 0 0 20px;
+}
+footer i {
+  margin-right: 3px;
+}
+footer a {
+  color: white;
+  margin-bottom: 25px;
+}
+/*______________________________RESTAURANTS CSS (les 4 pages )_______________________________________*/
+.arrow {
+  justify-content: center;
+  align-self: center;
+  color: black;
+  position: relative;
+  left: 30px;
+  font-size: 25px;
+}
+.menuRestaurant header {
+  flex-direction: row;
+}
+.menuRestaurant .topPic {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  max-height: 300px;
+}
+.menuRestaurant h1 {
+  box-shadow: none;
+  font-weight: 100;
+  margin: 20px 0 -10px 6%;
+}
+.menuRestaurant .coeur {
+  width: 27px;
+  height: 27px;
+}
+.menuRestaurant main section {
+  background-color: var(--lightGreyColor);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  position: relative;
+  top: -40px;
+  z-index: 7;
+}
+.menuRestaurant .topSection {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.mesCoeurs {
+  width: 27px;
+  height: 27px;
+  margin: 0 40px 0 0;
+  display: inline;
+  align-self: center;
+  position: relative;
+  top: 10px;
+  left: 5px;
+}
+.menuRestaurant .coeurVide {
+  position: relative;
+  top: 10px;
+  width: 27px;
+  height: 27px;
+}
+.menuRestaurant .coeur {
+  position: relative;
+  bottom: 12px;
+}
+.mesCoeurs .coeur {
+  display: none;
+  z-index: 99;
+  position: relative;
+  bottom: 25px;
+  width: 300px;
+  height: 300px;
+  color: transparent;
+  background-image: linear-gradient(#9356dc 0%, #ff79da 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.mesCoeurs:hover .coeur {
+  display: inline;
+  animation-duration: 0.7s;
+  animation-name: coeurMulticolore;
+}
+/*__________________________________Menu____les 4 pages de restaurants____________________________________________________________*/
+.lesMenus p {
+  margin: 50px 0 5px 6%;
+}
+.soulignement--vert {
+  content: "";
+  width: 40px;
+  margin-left: 6%;
+  border-top: 3px solid var(--tertiaryColor);
+}
+/*__________________________________MENU CARD____les 4 pages de restaurants____________________________________________________________*/
+.menuCard {
+  background-color: white;
+  width: 90%;
+  height: 80px;
+  margin: 15px auto 15px auto;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0px 10px 13px 1px rgba(192, 192, 192, 0.4);
+  overflow: hidden;
+}
+.menuCard__Plat {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: 15px 0 5px 15px;
+  max-width: 80%;
+}
+.menuCard__Plat p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menuCard__Plat__Titre {
+  color: black;
+  font-weight: 500;
+  margin: 0 0 5px 0;
+}
+.menuCard__Plat__Detail {
+  margin: 5px 0 5px 0;
+  font-weight: 100;
+}
+.menuCard__Fin {
+  display: flex;
+  overflow: hidden;
+  z-index: 3;
+}
+.menuCard__Prix {
+  display: flex;
+  align-items: center;
+  margin: 30px 0 20px 0;
+  width: 50px;
+}
+.menuCard__Prix p {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: 20px;
+}
+.menuCard__greenTick {
+  background-color: var(--tertiaryColor);
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 80px;
+  height: 100%;
+  position: relative;
+  z-index: 6;
+  transition: all 0.4s ease-in-out;
+  margin-right: -80px;
+}
+.menuCard__greenTick i {
+  color: white;
+  font-size: 25px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: var(--tertiaryColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 33%;
+  left: 33%;
+  z-index: 4;
+}
+.menuCard:hover .menuCard__greenTick {
+  margin-right: 0;
+  transition: 0.5s;
+}
+.menuCard:hover .menuCard__greenTick i {
+  animation: greenCheck;
+  animation-duration: 0.4s;
+  animation-delay: 0.1s;
+}
+.menuCard:hover .menuCard__Plat {
+  max-width: 55%;
+  animation-name: troisPetitsPoints;
+  animation-duration: 0.5s;
+}
+
+.M1 {
+  animation-name: abracadabra-M1;
+  animation-duration: 3s;
+}
+.M2 {
+  animation-name: abracadabra-M2;
+  animation-duration: 3s;
+}
+.M3 {
+  animation-name: abracadabra-M3;
+  animation-duration: 3s;
+}
+/* ________________________MEDIA QUERIES_____________________________________________*/
+@media only screen and (min-width: 1024px) {
+  .lesDesserts,
+  .lesEntrees,
+  .lesPlats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 33%;
+  }
+  .lesMenus {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .fonctionnement {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+  }
+  .fonctionnement__bouton {
+    width: 27%;
+    margin-top: 40px;
+  }
+  .fonctionnement .commeUnTitre {
+    position: absolute;
+    bottom: 100px;
+  }
+  .restaurant {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 70px;
+    position: relative;
+  }
+  .card {
+    width: 25%;
+  }
+  .restaurant .commeUnTitre {
+    position: absolute;
+    bottom: 300px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .restaurant {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 70px;
+    position: relative;
+  }
+  .restaurant a {
+    width: 50%;
+  }
+  .restaurant .commeUnTitre {
+    position: absolute;
+    bottom: 565px;
+  }
+  .fonctionnement .commeUnTitre {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
+}
